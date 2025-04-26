@@ -3,7 +3,7 @@ import streamlit as st
 st.markdown("""
     <style>
     .main {
-        background-color: #f0f2f6;
+        background-color: #99BC85;
         padding: 20px;
         border-radius: 10px;
     }
