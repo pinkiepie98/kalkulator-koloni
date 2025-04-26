@@ -28,7 +28,7 @@ volume_inokulasi = st.number_input("📏 Masukkan volume inokulasi (mL):", min_v
 
 
 if st.button("🚀 Hitung CFU/mL"):
-if faktor_pengenceran > 0 and volume_inokulasi > 0:
+    if faktor_pengenceran > 0 and volume_inokulasi > 0:
     hasil = jumlah_koloni / (faktor_pengenceran * volume_inokulasi)
         st.success(f"🎯 Hasilnya: {hasil:.2f} CFU/mL")
         st.balloons()
