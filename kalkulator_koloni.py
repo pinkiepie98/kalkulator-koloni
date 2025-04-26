@@ -22,12 +22,13 @@ st.write("Masukkan datamu di bawah ini, dan lihat hasilnya 🎯.")
 
 
 
-jumlah_koloni = st.number_input("Masukkan jumlah koloni:", min_value=0, step=1)
-faktor_pengenceran = st.number_input("Masukkan faktor pengenceran:", min_value=1, step=1)
-volume_inokulasi = st.number_input("Masukkan volume inokulasi (dalam mL):", min_value=0.01, step=0.01)
+jumlah_koloni = st.number_input("🧫 Masukkan jumlah koloni:", min_value=0, step=1)
+faktor_pengenceran = st.number_input("💧 Masukkan faktor pengenceran:", min_value=1, step=1)
+volume_inokulasi = st.number_input("📏 Masukkan volume inokulasi (mL):", min_value=0.01, step=0.01)
+
 
 if st.button("🚀 Hitung CFU/mL"):
-    if volume_inokulasi > 0:
+if faktor_pengenceran > 0 and volume_inokulasi > 0:
 hasil = jumlah_koloni / (faktor_pengenceran * volume_inokulasi)
         st.success(f"🎯 Hasilnya: {hasil:.2f} CFU/mL")
         st.balloons()
