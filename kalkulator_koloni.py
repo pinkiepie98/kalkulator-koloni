@@ -32,6 +32,9 @@ if faktor_pengenceran > 0 and volume_inokulasi > 0:
 hasil = jumlah_koloni / (faktor_pengenceran * volume_inokulasi)
         st.success(f"🎯 Hasilnya: {hasil:.2f} CFU/mL")
         st.balloons()
+else:
+        st.error("Faktor pengenceran dan volume inokulasi harus lebih besar dari 0!")
+
 
 
  st.markdown("""
