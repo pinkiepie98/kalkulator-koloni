@@ -1,6 +1,5 @@
 import streamlit as st
 
-CSS sederhana
 st.markdown("""
     <style>
     .main {
