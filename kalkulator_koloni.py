@@ -28,23 +28,16 @@ volume_inokulasi = st.number_input("📏 Masukkan volume inokulasi (mL):", min_v
 
 
 if st.button("🚀 Hitung CFU/mL"):
-    if faktor_pengenceran > 0 and volume_inokulasi > 0:
+    if volume_inokulasi > 0:
         hasil = jumlah_koloni / (faktor_pengenceran * volume_inokulasi)
-        st.success(f"🎯 Hasilnya: {hasil:.2f} CFU/mL")
-        st.balloons()
-else:
-        st.error("Faktor pengenceran dan volume inokulasi harus lebih besar dari 0!")
-
-
-import streamlit as st
- st.markdown("""
-            <audio autoplay>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            </audio>
-            """, unsafe_allow_html=True)
-        st.info("Hitungannya udah beres, sekarang waktunya happy! 🦠🥳")
+        st.success(f"🎯 Hasil hitungan: {hasil:.2f} CFU/mL (Colony Forming Units per mL)")
+        st.balloons()  # <--- ini animasi confetti / balon!
+        st.info("Bakteri udah dihitung, sekarang waktunya kamu santai dulu! ☕🦠")
     else:
-        st.error("❌ Volume inokulasi tidak boleh nol!")
+        st.error("❌ Volume inokulasi tidak boleh nol ya!")
+
+st.markdown('</div>', unsafe_allow_html=True)
+
 
 st.markdown('</div>', unsafe_allow_html=True)
 
