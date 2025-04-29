@@ -1,3 +1,36 @@
+st.title("🧫 Welcome to Colony Calculator")
+st.markdown("Selamat datang di aplikasi Kalkulator Koloni Bakteri.")
+
+menu = st.sidebar.selectbox("Pilih Menu", ["Beranda", "Informasi Koloni Bakteri", "Tentang Kami"])
+
+
+if menu == "Beranda":
+    st.header("💡 Kalkulator Koloni")
+    st.markdown("""
+        Aplikasi ini digunakan untuk menghitung jumlah koloni bakteri berdasarkan data jumlah koloni, 
+        volume inokulasi, dan faktor pengenceran. Masukkan nilai-nilai pada form yang tersedia untuk memulai perhitungan.
+    """)
+
+elif menu == "Informasi Koloni Bakteri":
+    st.header("🔬 Informasi Koloni Bakteri")
+    st.markdown("""
+        Koloni bakteri adalah kelompok sel bakteri yang berkembang biak dari satu sel bakteri induk di atas media padat. 
+        Koloni digunakan untuk memperkirakan jumlah mikroorganisme dalam sampel. 
+        Ini penting dalam kontrol kualitas makanan, air, dan produk lainnya.
+    """)
+
+
+elif menu == "Tentang Kami":
+    st.header("📘 Tentang Kami")
+    st.markdown("""
+        Aplikasi ini dikembangkan sebagai alat bantu pembelajaran dan praktikum dalam mikrobiologi, 
+        khususnya untuk analisis jumlah koloni bakteri. Dirancang dengan antarmuka yang sederhana dan mudah digunakan.
+    """)
+```
+
+
+
+
 import streamlit as st
 
 st.markdown("""
